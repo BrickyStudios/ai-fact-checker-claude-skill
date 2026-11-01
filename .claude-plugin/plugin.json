@@ -1,0 +1,11 @@
+{
+  "name": "fact-checker",
+  "version": "1.0.0",
+  "description": "AI fact checker for Claude: checks reports, PDFs and AI drafts claim by claim, recomputes every figure and verifies every quote by script.",
+  "author": { "name": "BrickyStudios", "url": "https://github.com/BrickyStudios" },
+  "homepage": "https://github.com/BrickyStudios/ai-fact-checker-claude-skill",
+  "repository": "https://github.com/BrickyStudios/ai-fact-checker-claude-skill",
+  "license": "MIT",
+  "keywords": ["fact-check", "fact-checker", "ai-fact-checker", "claude-skill", "hallucination", "pdf"],
+  "skills": ["./skills/fact-checker"]
+}

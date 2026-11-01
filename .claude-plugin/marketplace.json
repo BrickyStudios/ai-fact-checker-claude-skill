@@ -1,0 +1,12 @@
+{
+  "name": "brickystudios",
+  "owner": { "name": "BrickyStudios", "url": "https://github.com/BrickyStudios" },
+  "plugins": [
+    {
+      "name": "fact-checker",
+      "source": "./",
+      "description": "AI fact checker for Claude: checks documents claim by claim, recomputes figures and verifies quotes by script.",
+      "category": "productivity"
+    }
+  ]
+}

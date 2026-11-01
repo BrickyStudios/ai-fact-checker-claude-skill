@@ -1,0 +1,197 @@
+{
+ "claims": [
+  {
+   "id": "C01",
+   "sentence": "S0004",
+   "page": 1,
+   "type": "calculation",
+   "quote": "Revenue grew 9.5% to EUR 1,840 million in 2025",
+   "verdict": "confirmed",
+   "calc": {
+    "expr": "(1840-1680)/1680*100",
+    "stated": 9.5,
+    "decimals": 1
+   },
+   "evidence": [
+    {
+     "kind": "document",
+     "page": 1,
+     "quote": "Revenue 1,840 1,680"
+    }
+   ]
+  },
+  {
+   "id": "C02",
+   "sentence": "S0004",
+   "page": 1,
+   "type": "calculation",
+   "quote": "operating profit rose 14.8% to EUR 186 million",
+   "verdict": "wrong",
+   "explanation": "Operating profit rose from EUR 165 million to EUR 186 million. That is 12.7%, not 14.8%.",
+   "correction": "operating profit rose 12.7% to EUR 186 million",
+   "calc": {
+    "expr": "(186-165)/165*100",
+    "stated": 14.8,
+    "decimals": 1
+   },
+   "evidence": [
+    {
+     "kind": "document",
+     "page": 1,
+     "quote": "Operating profit 186 165"
+    }
+   ]
+  },
+  {
+   "id": "C03",
+   "sentence": "S0005",
+   "page": 1,
+   "type": "internal",
+   "quote": "Our workforce grew to 3,120 colleagues across six countries",
+   "verdict": "inconsistent",
+   "explanation": "The key figures table on the same page gives 3,210 employees at year end. Two digits look swapped.",
+   "correction": "Our workforce grew to 3,210 colleagues across six countries",
+   "evidence": [
+    {
+     "kind": "document",
+     "page": 1,
+     "quote": "Employees at year end 3,210 3,040"
+    }
+   ]
+  },
+  {
+   "id": "C04",
+   "sentence": "S0006",
+   "page": 1,
+   "type": "internal",
+   "quote": "Food waste per tonne produced has fallen every year since 2021",
+   "verdict": "inconsistent",
+   "explanation": "The waste table shows a rise in 2023, from 38 to 39 kg per tonne. Three of the four year-on-year changes were falls. The fall from 41 kg to 33 kg since 2021 is 19.5%, about 20%.",
+   "correction": "Food waste per tonne produced has fallen by 20% since 2021",
+   "evidence": [
+    {
+     "kind": "document",
+     "page": 2,
+     "quote": "41 38 39 35 33"
+    }
+   ]
+  },
+  {
+   "id": "C05",
+   "sentence": "S0006",
+   "page": 1,
+   "type": "external",
+   "quote": "every request about personal data is answered within 60 days, as Article 12 of the GDPR requires",
+   "verdict": "wrong",
+   "explanation": "Article 12(3) GDPR sets one month, extendable by two further months only where necessary.",
+   "correction": "every request about personal data is answered within one month, as Article 12 of the GDPR requires",
+   "evidence": [
+    {
+     "kind": "source",
+     "url": "https://gdpr-info.eu/art-12-gdpr/",
+     "title": "GDPR Article 12",
+     "quote": "without undue delay and in any event within one month of receipt of the request"
+    }
+   ]
+  },
+  {
+   "id": "C06",
+   "sentence": "S0007",
+   "page": 1,
+   "type": "plausibility",
+   "quote": "produce 410 MWh a year, enough electricity for about 12,000 Danish households",
+   "verdict": "misleading",
+   "explanation": "12,000 households on 410 MWh leaves 34 kWh per household per year. At Ørsted's 4,000 kWh for a typical single-family house, 410 MWh covers about 103 homes.",
+   "correction": "produce 410 MWh a year, enough electricity for about 100 Danish households",
+   "calc": {
+    "expr": "410*1000/4000",
+    "stated": 12000,
+    "decimals": 0
+   },
+   "evidence": [
+    {
+     "kind": "source",
+     "url": "https://orsted.com/en/media/news/2016/08/sharp-increase-in-entertainment-related-power-consumption",
+     "title": "Ørsted press release",
+     "date": "2016",
+     "quote": "in an average single-family house with a typical annual consumption of 4,000kWh"
+    }
+   ]
+  },
+  {
+   "id": "C07",
+   "sentence": "S0015",
+   "page": 2,
+   "type": "calculation",
+   "quote": "Group 1,840 1,680",
+   "verdict": "inconsistent",
+   "explanation": "The three segments add up to 1,860, not 1,840. Note 4 explains the gap: EUR 20 million of sales between segments are eliminated, but this table has no eliminations row.",
+   "correction": "Add a row \"Eliminations -20\" above the group total",
+   "calc": {
+    "expr": "910+560+390",
+    "stated": 1840,
+    "decimals": 0
+   },
+   "evidence": [
+    {
+     "kind": "document",
+     "page": 2,
+     "quote": "Dairy 910 850"
+    },
+    {
+     "kind": "document",
+     "page": 2,
+     "quote": "Bakery 560 500"
+    },
+    {
+     "kind": "document",
+     "page": 2,
+     "quote": "Frozen 390 330"
+    },
+    {
+     "kind": "document",
+     "page": 2,
+     "quote": "Sales between segments of EUR 20 million are eliminated on consolidation"
+    }
+   ]
+  }
+ ],
+ "skipped": [
+  {
+   "sentence": "S0001",
+   "reason": "title"
+  },
+  {
+   "sentence": "S0009",
+   "reason": "table row used as evidence in C01 and C02"
+  },
+  {
+   "sentence": "S0010",
+   "reason": "table row used as evidence in C03"
+  },
+  {
+   "sentence": "S0012",
+   "reason": "table row used as evidence in C07"
+  },
+  {
+   "sentence": "S0013",
+   "reason": "table row used as evidence in C07"
+  },
+  {
+   "sentence": "S0014",
+   "reason": "table row used as evidence in C07"
+  },
+  {
+   "sentence": "S0017",
+   "reason": "used as evidence in C07"
+  },
+  {
+   "sentence": "S0011",
+   "reason": "table row used as evidence in C03"
+  },
+  {
+   "sentence": "S0018",
+   "reason": "note used as evidence in C07"
+  }
+ ]
+}
