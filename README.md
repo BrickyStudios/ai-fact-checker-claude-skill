@@ -1,9 +1,18 @@
+<div align="center">
+
 # AI Fact Checker for Claude
+
+<!-- badges -->
+[![python](https://img.shields.io/badge/made_with-python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![tests](https://img.shields.io/github/actions/workflow/status/BrickyStudios/ai-fact-checker-claude-skill/test.yml?label=tests)](https://github.com/BrickyStudios/ai-fact-checker-claude-skill/actions/workflows/test.yml)
+[![Claude Code plugin](https://img.shields.io/badge/Claude_Code-plugin-D97757?logo=claude&logoColor=white)](#install)
+[![Last Commit](https://img.shields.io/github/last-commit/BrickyStudios/ai-fact-checker-claude-skill)](https://github.com/BrickyStudios/ai-fact-checker-claude-skill/commits/main)
+[![Stars](https://img.shields.io/github/stars/BrickyStudios/ai-fact-checker-claude-skill?style=flat)](https://github.com/BrickyStudios/ai-fact-checker-claude-skill/stargazers)
+[![License](https://img.shields.io/github/license/BrickyStudios/ai-fact-checker-claude-skill)](https://github.com/BrickyStudios/ai-fact-checker-claude-skill/blob/main/LICENSE)
 
 **A free, open-source Claude skill that fact-checks reports, PDFs and AI drafts claim by claim.**
 
-[![tests](https://github.com/BrickyStudios/ai-fact-checker-claude-skill/actions/workflows/test.yml/badge.svg)](https://github.com/BrickyStudios/ai-fact-checker-claude-skill/actions/workflows/test.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-0E5C55.svg)](LICENSE)
+</div>
 
 Ask Claude to check a document and it can still invent a quote or get a sum wrong while checking. This skill splits the job. Claude reads, searches and judges. A small Python script proves what code can prove:
 
